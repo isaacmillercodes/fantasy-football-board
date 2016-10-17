@@ -1,4 +1,23 @@
+body {
+  padding-top: 75px;
+}
+
 .post-image {
   max-height: 150px;
   max-width: 150px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+/*.panel-heading {
+  float: left;
+}*/
+
+/*.panel-body {
+  clear: both;
+}*/
+
+[ng-cloak] {
+  display: none;
 }

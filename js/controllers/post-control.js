@@ -14,7 +14,12 @@
         title: 'Lamar Miller: Beast Mode',
         text: 'Finally the high draft pick pays off...just won my match up after getting a fat zero from Sammie Coates.',
         votes: 0,
-        comments: []
+        comments: [
+          {
+            author: '1.21 JJ Watts',
+            text: 'Hell yeah, that\'s my boy!'
+          }
+        ]
       }
     ];
 
