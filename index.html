@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="ffReddit">
+  <head>
+    <meta charset="utf-8">
+    <title>ffReddit</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+
+    <main ng-controller="postController as postCtrl">
+
+      <div ng-repeat="post in posts">
+        <img src="{{post.image}}" class="post-image">
+        <h4>{{post.title}}</h4>
+        <h5>{{post.author}}</h5>
+        <p>{{post.text}}</p>
+      </div>
+
+    </main>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/controllers/post-control.js"></script>
+    <script src="./js/controllers/vote-control.js"></script>
+    <script src="./js/controllers/comment-control.js"></script>
+  </body>
+</html>
