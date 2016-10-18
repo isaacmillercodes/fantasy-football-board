@@ -48,12 +48,14 @@
               {{post.votes}}
             </p>
             <p>{{post.date | amCalendar }}</p>
-            <p ng-click="showComments=true"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> {{post.comments.length}} Comments</p>
+            <div ng-click="showComments=!showComments">
+              <p ng-if="post.comments.length != 1"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> {{post.comments.length}} Comments</p>
+
+              <p ng-if="post.comments.length == 1"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> {{post.comments.length}} Comment</p>
+            </div>
             <p>{{post.text}}</p>
             <div class="comments" ng-show="showComments">
-              <button ng-click="showComments=false">Hide Comments</button>
               <div ng-repeat="comment in post.comments">
-
                 <p><strong>{{comment.author}}</strong></p>
                 <p><em>{{comment.text}}</em></p>
               </div>
