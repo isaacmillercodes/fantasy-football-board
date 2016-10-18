@@ -8,12 +8,12 @@
     $rootScope.posts = [
       {
         id: 1,
-        date: '10/16/2016 21:45 MDT',
+        date: new Date('October 16, 2016 21:45:00'),
         image: 'http://ww1.hdnux.com/photos/53/55/21/11457648/3/727x0.jpg',
         author: 'LittleJerry',
         title: 'Lamar Miller: Beast Mode',
         text: 'Finally the high draft pick pays off...just won my match up after getting a fat zero from Sammie Coates.',
-        votes: 3,
+        votes: -2,
         comments: [
           {
             author: '1.21 JJ Watts',
@@ -23,12 +23,12 @@
       },
       {
         id: 2,
-        date: '10/16/2016 08:45 MDT',
+        date: new Date('October 16, 2016 08:32:00'),
         image: 'http://www.rotoprofessor.com/football/pictures/CJAnderson.jpg',
         author: 'Demaryius_Targaryen',
         title: 'What to do about C.J. Anderson?',
         text: 'Worried Booker might start stealing carries from him. Last year he came up big in the last half of the season, but I don\'t feel like that can happen again. Should I hang on to him or try to get a trade out of him?',
-        votes: -1,
+        votes: 1,
         comments: [
           {
             author: 'BroncosFan86',
@@ -46,7 +46,7 @@
       },
       {
         id: 3,
-        date: '10/16/2016 15:45 MDT',
+        date: new Date('October 16, 2016 15:04:00'),
         image: 'http://images0.minutemediacdn.com/production/912x516/580409c862c4cf92d2000001.jpg',
         author: 'FunkyFL',
         title: 'Roethlisberger Has a Torn Meniscus',
@@ -65,7 +65,7 @@
       },
       {
         id: 4,
-        date: '10/17/2016 07:45 MDT',
+        date: new Date('October 17, 2016 07:14:00'),
         image: 'http://a.espncdn.com/photo/2016/1013/r139488_576x324_16-9.jpg',
         author: 'FunkyFL',
         title: 'Waiver Wire Pickups: Week 7',
