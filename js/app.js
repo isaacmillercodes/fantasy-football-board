@@ -1,6 +1,6 @@
 (function () {
   'use strict';
 
-  angular.module('ffReddit', []);
-  
+  angular.module('ffReddit', ['angularMoment']);
+
 })();

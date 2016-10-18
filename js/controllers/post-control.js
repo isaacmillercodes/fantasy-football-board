@@ -1,6 +1,5 @@
 (function() {
   'use strict';
-  console.log('posts!');
 
   const app = angular.module('ffReddit');
 
