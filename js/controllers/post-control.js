@@ -92,6 +92,7 @@
     }
 
     this.search = '';
+    this.showPostForm = false;
 
   });
 

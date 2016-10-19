@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body ng-cloak ng-controller="sortController as sorts">
+
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <a class="navbar-brand navbar-right" href="#">ffReddit - Image Board for Fantasy Football Freaks</a>
@@ -58,7 +59,7 @@
         </form>
       </div>
 
-      <div ng-repeat="post in posts | filter: postCtrl.search | orderBy:sorts.filter" class="panel panel-default col-xs-10 col-xs-offset-1">
+      <div ng-repeat="post in posts | filter: postCtrl.search | orderBy:sorts.filter" class="panel panel-default col-xs-10 col-xs-offset-1" ng-controller="newCommentController as newComment">
         <div class="container">
             <img ng-src="{{post.image}}" class="post-image col-xs-2">
           <div class="col-xs-8">
@@ -75,12 +76,12 @@
 
               <p ng-if="post.comments.length == 1"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> {{post.comments.length}} Comment</p>
             </div>
-            <div ng-click="showCommentForm=!showCommentForm">
+            <div ng-click="newComment.showCommentForm=!newComment.showCommentForm">
               <p><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Add Comment</p>
             </div>
             <p>{{post.text}}</p>
 
-            <div ng-show="showCommentForm" ng-controller="newCommentController as newComment">
+            <div ng-show="newComment.showCommentForm">
               <form class="form-inline" name="commentForm" ng-submit="newComment.submit(post.id, commentForm)">
                 <input type="hidden" ng-model="newComment.postID" value="{{post.id}}">
                 <div class="form-group">
@@ -92,7 +93,7 @@
                   <input type="text" class="form-control" id="commentText" placeholder="Enter your comment" ng-model="newComment.text">
                 </div>
 
-                <button type="submit" class="btn btn-default" ng-click="showCommentForm = false">Add Comment</button>
+                <button type="submit" class="btn btn-default">Add Comment</button>
               </form>
             </div>
 

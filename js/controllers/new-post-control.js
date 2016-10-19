@@ -5,6 +5,8 @@
 
   app.controller('newPostController', function($rootScope) {
 
+
+
     this.submit = function(form) {
       let newPost = {};
       newPost.id = ($rootScope.posts.length + 1);
@@ -24,6 +26,7 @@
       this.text = '';
       form.$setPristine();
       form.$setUntouched();
+      postCtrl.showPostForm = false;
     };
 
 

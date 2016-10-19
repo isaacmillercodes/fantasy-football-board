@@ -4,14 +4,13 @@
   const app = angular.module('ffReddit');
 
   app.controller('newCommentController', function($rootScope) {
+    this.showCommentForm = false;
 
     this.submit = function(id, form) {
       let newComment = {};
       newComment.author = this.author;
       newComment.text = this.text;
       let postID = parseInt(id);
-
-      console.log(this.author, postID);
 
       let currentPost = $rootScope.posts.filter(post => {
         return post.id === postID;
@@ -23,6 +22,8 @@
       this.text = '';
       form.$setPristine();
       form.$setUntouched();
+      this.showCommentForm = false;
+
     };
 
   });
