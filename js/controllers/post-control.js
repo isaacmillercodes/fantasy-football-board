@@ -4,7 +4,6 @@
   const app = angular.module('ffReddit');
 
   app.controller('postController', function($rootScope) {
-
     if (!$rootScope.posts) {
       $rootScope.posts = [
         {
@@ -92,7 +91,12 @@
     }
 
     this.search = '';
-    this.showPostForm = false;
+
+    $rootScope.showPostForm = false;
+
+    $rootScope.revealPostForm = () => {
+      $rootScope.showPostForm = !$rootScope.showPostForm;
+    };
 
   });
 
